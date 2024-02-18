@@ -1,0 +1,34 @@
+Cada framework tem um padrão, no Django tem MTV (Model Template View).
+Model: representa a camada de dados e é responsavel por definir a estrutura do BD.
+Template: define a renderização dos dados (tudo que é visual - frontend - fica numa pastinha template)
+View: logica de processamento e exibiçao das informações
+
+
+Padrão MVC (Model View Controller)
+Model e View são iguais no MTV
+Controller: responsavel pelo controle do sistema em geral
+
+-----------------------------------
+Instalar ambiente virtual
+terminal: pip install virtualenv
+
+Criação do ambiente virtual
+terminal: python -m venv nome
+
+Ativar ambiente virtual
+terminal: nome\scripts\activate (usar tab para autocomplete)
+
+Instalar o Django
+terminal: pip install django
+
+Instalar o bootstrap
+terminal: pip install django-bootstrap-v5
+
+Iniciar o projeto (com as configurações principais do sistema)
+terminal: django-admin startproject projeto_nome .  (não esquecer do ponto, ele impede a duplicidade de pasta)
+
+Iniciar o aplicativo (com as funcionalidades basicas)
+terminal: python manage.py startapp base
+
+Executar o server
+terminal: python manage.py runserver
