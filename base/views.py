@@ -8,6 +8,15 @@ def inicio(request):
 
 
 def cadastro(request):
-    if request.method == 'GET':
+    sucesso = False
+    if request.method == 'GET': # GET: pegando informacoes do usuario e POST envia
         form = CadastroForm()
-    return render(request, 'cadastro.html') 
+    else:
+        form = CadastroForm(request.POST)
+        if form.is_valid(): # Verifica se as infomaçoes estão corretas
+            sucesso = True # Se estiver tudo correto, sucesso altera pra True 
+    contexto = { #Vale para o IF e para o else
+        'form': form,
+        'sucesso': sucesso
+    }
+    return render(request, 'cadastro.html', contexto) 
