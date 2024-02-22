@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from . forms import CadastroForm
 
 # def "view". Cada uma delas podemos redirecionar para outras paginas
 def inicio(request):
@@ -8,4 +8,6 @@ def inicio(request):
 
 
 def cadastro(request):
+    if request.method == 'GET':
+        form = CadastroForm()
     return render(request, 'cadastro.html') 
