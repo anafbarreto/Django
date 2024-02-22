@@ -19,6 +19,8 @@ class CadastroForm(forms.ModelForm):
     class Meta:
         model = Cadastro
         fields = '__all__' # Todos os campos, mas pode ser preenchido um por um tbm
-        
+        widgets = {
+            'senha': forms.PasswordInput() # O campo de senha vai ter a informação ocultada
+        }
 
 

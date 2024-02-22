@@ -19,7 +19,12 @@ from django.urls import path
 from base.views import inicio, cadastro
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls), # Para criar o admin python manage.py createsuperuser
     path('', inicio), #Importando a view para ser como uma "home", por isso o caminho em branco ' '
     path('cadastro/', cadastro)
 ]     
+
+"""
+User: ana_barreto
+email: 
+Password: Anab****"""
