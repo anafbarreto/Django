@@ -30,5 +30,8 @@ terminal: django-admin startproject projeto_nome .  (não esquecer do ponto, ele
 Iniciar o aplicativo (com as funcionalidades basicas)
 terminal: python manage.py startapp base
 
+Se não tiver um geranciador de dados, o VScode tem uma extensão
+Extensões: SQLite Viewer
+
 Executar o server
 terminal: python manage.py runserver

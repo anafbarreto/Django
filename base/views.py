@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from . forms import CadastroForm
+from base.forms import CadastroForm
+from base.models import Cadastro
 
 # def "view". Cada uma delas podemos redirecionar para outras paginas
 def inicio(request):
@@ -9,12 +10,10 @@ def inicio(request):
 
 def cadastro(request):
     sucesso = False
-    if request.method == 'GET': # GET: pegando informacoes do usuario e POST envia
-        form = CadastroForm()
-    else:
-        form = CadastroForm(request.POST)
-        if form.is_valid(): # Verifica se as infomaçoes estão corretas
-            sucesso = True # Se estiver tudo correto, sucesso altera pra True 
+    form = CadastroForm(request.POST or None) # Verifica se está preenchido ou vazio
+    if form.is_valid(): # Verifica se as infomaçoes estão corretas
+        sucesso = True # Se estiver tudo correto, sucesso altera pra True 
+        form.save()   
     contexto = { #Vale para o IF e para o else
         'form': form,
         'sucesso': sucesso
