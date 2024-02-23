@@ -1,0 +1,22 @@
+{% extends "inicio.html" %}
+{% load bootstrap5 %}
+{% block principal %}
+
+  <h1 class="text-body-emphasis">Cursos online</h1>
+
+  {% if sucesso %}
+    <div class="alert alert-success" role="alert">
+      Curso cadastrado com sucesso!
+    </div>
+  {% else %}
+  
+  <form action="" method="POST" id="form">
+    {% csrf_token %}
+    {% bootstrap_form form %} <!--importando os campos do forms.py-->
+   
+    <button type="submit" class="btn btn-primary btn-lg px-4">Inserir curso</button>
+   
+  </form>
+ 
+  {% endif %}
+{% endblock %}

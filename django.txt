@@ -35,3 +35,9 @@ Extensões: SQLite Viewer
 
 Executar o server
 terminal: python manage.py runserver
+
+
+--------------------------------------------
+Sempre que criar ou alterar tabelas no banco de dados, precisa atualizar com
+terminal: python manage.py makemigrations 
+terminal: python manage.py migrate

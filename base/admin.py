@@ -8,3 +8,4 @@ class CadastroAdmin(admin.ModelAdmin):
     list_display = ['nome', 'email', 'data']
     search_fields = ['nome', 'email'] #Pesquisa por nome e email
     list_filter = ['data'] #Filtro por data
+    list_per_page = 10
