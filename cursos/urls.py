@@ -7,8 +7,10 @@ Depois preencher o URL geral com o caminho pra essa pasta aqui.
 
 from django.urls import path
 from cursos.views import criar_curso
+from cursos.views import exibir_cursos
 
 app_name = 'cursos'
 urlpatterns = [
     path('criar_curso/', criar_curso, name='criar_curso'),
+    path('cursos_disponiveis/', exibir_cursos, name='Cursos disponiveis'),
 ]

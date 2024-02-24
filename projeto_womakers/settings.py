@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'base',
     'bootstrap5',
     'cursos',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +83,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
 
 
 # Password validation
