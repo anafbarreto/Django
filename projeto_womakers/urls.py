@@ -23,7 +23,9 @@ urlpatterns = [
     path('admin/', admin.site.urls), # Para criar o admin python manage.py createsuperuser
     path('', inicio), #Importando a view para ser como uma "home", por isso o caminho em branco ' '
     path('cadastro/', cadastro),
-    path('cursos/', include('cursos.urls', namespace='cursos'))
+    path('cursos/', include('cursos.urls', namespace='cursos')),
+    path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
+    path('api/', include('rest_api.urls', namespace='rest_api')),
 ]     
 
 """

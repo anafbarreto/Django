@@ -1,0 +1,11 @@
+REST (Representational State Transfer)
+É um estilo arquitetônico aplicado para fornecer padrões entre sistemas de computador na web, facilitando a comunicação entre eles. 
+
+
+-----
+
+O REST é bem inspirado no Django
+Dentro dele temos o Modelviewset um conjunto de operações (Listar, buscar, adiciona, atualizar etc...)
+É uma forma generica do classico Get(pegar), Post(enviar), Put(atualizar) e Delete(remover).
+
+Serializer = converter objetos em Json

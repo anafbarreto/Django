@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'bootstrap5',
     'cursos',
     'rest_framework',
+    'rest_api',
 ]
 
 MIDDLEWARE = [
